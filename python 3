@@ -1,0 +1,24 @@
+import random
+print("right password 3 numbers from 0 to 9 & PRESS  ENTER")
+a=str(input())
+print(a)
+# this would be the pseudo code
+# while true:
+#     generate guess
+	#         if guess == password:
+	#             print(password)
+	#             break
+
+
+while True:
+  # generate guess
+  hack=[]
+  for i in range(3) : 
+      hack.append(random.randint(0,9))
+      # convert guess to string so that you can compare it to the user input
+  hack_string = "".join( str(i) for i in hack )
+  # compare guess and user input
+  print(f"Trying {hack_string}")
+  if hack_string == a:
+    print(f"Hacked! Password is{hack_string}")
+    break# break out of the while loop here
